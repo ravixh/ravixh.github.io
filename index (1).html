@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Ravir Scott — Sketchbook</title>
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ravir Scott — Sketchbook">
+<meta property="og:description" content="Artist, Developer & Author from Sonma, Begusarai. ">
+<meta property="og:url" content="https://ravirscott.github.io/">
+<meta property="og:image" content="https://ravirscott.github.io/sketch-hero.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ravir Scott — Sketchbook">
+<meta name="twitter:description" content="Independent Artist, Developer & Author from Bihar.">
+<meta name="twitter:image" content="https://ravirscott.github.io/sketch-hero.jpg">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ravir Scott — Sketchbook</title>
+  <meta name="description" content="The sketchbook of Ravir Scott (Ravish Kumar) — independent artist, developer & author from Sonma, Begusarai, Bihar. Music, code, books and more." />
+  <meta name="author" content="Ravir Scott" />
+  <meta property="og:title" content="Ravir Scott — Sketchbook" />
+  <meta property="og:description" content="The sketchbook of Ravir Scott — independent artist, developer & author from Sonma, Begusarai, Bihar." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ravir Scott — Sketchbook" />
+  <meta name="twitter:description" content="The sketchbook of Ravir Scott — independent artist, developer & author from Sonma, Begusarai, Bihar." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Kalam:wght@300;400;700&family=Special+Elite&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    :root {
+      --paper: oklch(0.955 0.025 85);
+      --paper-deep: oklch(0.92 0.035 80);
+      --ink: oklch(0.26 0.03 45);
+      --ink-soft: oklch(0.42 0.04 45);
+      --terracotta: oklch(0.6 0.14 40);
+      --mustard: oklch(0.75 0.14 80);
+      --sage: oklch(0.62 0.07 145);
+      --indigo-ink: oklch(0.42 0.09 255);
+      --card: oklch(0.97 0.02 85);
+
+      --font-hand: "Caveat", "Kalam", cursive;
+      --font-note: "Kalam", "Caveat", cursive;
+      --font-type: "Special Elite", "Courier New", monospace;
+      --font-serif: "Cormorant Garamond", Georgia, serif;
+    }
+    html.dark {
+      --paper: oklch(0.22 0.02 60);
+      --paper-deep: oklch(0.18 0.02 55);
+      --ink: oklch(0.92 0.03 82);
+      --ink-soft: oklch(0.78 0.03 78);
+      --terracotta: oklch(0.72 0.15 42);
+      --mustard: oklch(0.82 0.14 82);
+      --sage: oklch(0.72 0.08 145);
+      --indigo-ink: oklch(0.7 0.11 255);
+      --card: oklch(0.26 0.022 62);
+    }
+
+    body {
+      background-color: var(--paper);
+      color: var(--ink);
+      font-family: var(--font-note);
+      background-image:
+        radial-gradient(color-mix(in oklch, var(--ink) 6%, transparent) 1px, transparent 1px),
+        radial-gradient(color-mix(in oklch, var(--ink) 4%, transparent) 1px, transparent 1px),
+        linear-gradient(180deg, var(--paper) 0%, var(--paper-deep) 100%);
+      background-size: 3px 3px, 7px 7px, 100% 100%;
+      background-position: 0 0, 1px 2px, 0 0;
+      margin: 0;
+    }
+    h1, h2, h3, h4 { font-family: var(--font-hand); letter-spacing: 0.01em; margin: 0; }
+    em { font-style: italic; }
+
+    .fg { color: var(--ink); }
+    .fg-soft { color: color-mix(in oklch, var(--ink) 60%, transparent); }
+
+    .paper-card {
+      background: var(--card);
+      border: 1.5px solid var(--ink);
+      border-radius: 4px 18px 6px 14px;
+      box-shadow: 2px 3px 0 color-mix(in oklch, var(--ink) 20%, transparent),
+                  0 10px 25px -12px color-mix(in oklch, var(--ink) 30%, transparent);
+      position: relative;
+      background-image: radial-gradient(color-mix(in oklch, var(--ink) 8%, transparent) 1px, transparent 1px);
+      background-size: 4px 4px;
+    }
+    .sketch-border {
+      border: 1.5px solid var(--ink);
+      border-radius: 6px 22px 8px 18px;
+    }
+    .washi-tape {
+      position: absolute;
+      top: -14px; left: 50%;
+      transform: translateX(-50%) rotate(-3deg);
+      width: 90px; height: 22px;
+      background: oklch(0.85 0.13 80 / 0.75);
+      border-left: 1px dashed color-mix(in oklch, var(--ink) 30%, transparent);
+      border-right: 1px dashed color-mix(in oklch, var(--ink) 30%, transparent);
+      box-shadow: 0 2px 4px color-mix(in oklch, var(--ink) 20%, transparent);
+    }
+    .ink-underline {
+      background-image: linear-gradient(to right, var(--terracotta) 0%, var(--terracotta) 100%);
+      background-repeat: no-repeat;
+      background-size: 100% 3px;
+      background-position: 0 100%;
+      padding-bottom: 2px;
+    }
+    .rubber-stamp {
+      display: inline-block;
+      border: 2px solid var(--terracotta);
+      color: var(--terracotta);
+      padding: 4px 12px;
+      font-family: var(--font-type);
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      font-size: 0.7rem;
+      transform: rotate(-4deg);
+      opacity: 0.85;
+      border-radius: 2px;
+    }
+    .hand-btn {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      padding: 0.6rem 1.2rem;
+      border: 1.5px solid var(--ink);
+      border-radius: 4px 16px 6px 14px;
+      background: var(--card);
+      font-family: var(--font-hand);
+      font-size: 1.15rem;
+      color: var(--ink);
+      box-shadow: 2px 3px 0 color-mix(in oklch, var(--ink) 22%, transparent);
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .hand-btn:hover { transform: translateY(-2px); }
+    .hand-btn-primary {
+      background: var(--terracotta);
+      color: var(--paper);
+      border-color: var(--ink);
+    }
+    .dashed-b { border-bottom: 2px dashed color-mix(in oklch, var(--ink) 40%, transparent); }
+    .dashed-t { border-top: 2px dashed color-mix(in oklch, var(--ink) 40%, transparent); }
+    .navbar {
+      position: sticky; top: 0; z-index: 40;
+      backdrop-filter: blur(6px);
+      background: color-mix(in oklch, var(--paper) 88%, transparent);
+      border-bottom: 2px dashed color-mix(in oklch, var(--ink) 40%, transparent);
+    }
+    .terracotta { color: var(--terracotta); }
+    .indigo-ink { color: var(--indigo-ink); }
+    .sage { color: var(--sage); }
+    .mustard-bg { background: var(--mustard); }
+
+    /* Sketch doodle */
+    .doodle { color: color-mix(in oklch, var(--ink) 50%, transparent); }
+  </style>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <div class="navbar">
+    <div class="mx-auto grid max-w-6xl grid-cols-[minmax(0,1fr)_auto] items-center gap-3 px-4 py-3 md:px-10">
+      <a href="#top" class="min-w-0">
+        <div class="text-[10px] uppercase tracking-[0.25em] fg-soft" style="font-family: var(--font-type);">Ravir's Wire · RRSS</div>
+        <div class="truncate text-xl leading-none md:text-2xl" style="font-family: var(--font-hand);">
+          <span class="terracotta">Ravir Scott</span><span class="hidden fg-soft sm:inline"> — sketchbook</span>
+        </div>
+      </a>
+      <div class="flex shrink-0 items-center gap-2 md:gap-3">
+        <nav class="flex shrink-0 gap-2 text-base md:gap-4 md:text-lg" style="font-family: var(--font-hand);">
+          <a href="#about" class="rounded px-1 hover:text-[color:var(--terracotta)]">about</a>
+          <a href="#work" class="rounded px-1 hover:text-[color:var(--terracotta)]">work</a>
+          <a href="#links" class="rounded px-1 hover:text-[color:var(--terracotta)]">links</a>
+          <a href="#contact" class="rounded px-1 hover:text-[color:var(--terracotta)]">contact</a>
+        </nav>
+        <button id="theme-toggle" class="hand-btn" style="padding: .25rem .6rem; font-size: 1rem;" aria-label="Toggle theme">☀ day</button>
+      </div>
+    </div>
+  </div>
+
+  <main id="top" class="mx-auto max-w-6xl px-4 py-8 sm:px-5 md:px-10 md:py-16">
+
+    <!-- HERO -->
+    <section class="relative grid gap-8 md:grid-cols-5 md:gap-10">
+      <div class="md:col-span-3">
+        <div class="mb-3 inline-block rubber-stamp">Est. 2026 · Bihar, IN</div>
+        <h1 class="text-5xl leading-[0.9] sm:text-6xl md:text-8xl" style="font-family: var(--font-hand);">
+          Ravir <br />
+          <span class="terracotta">Scott</span>
+          <span class="align-top text-3xl fg-soft md:text-4xl"> ✦</span>
+        </h1>
+        <p class="mt-5 max-w-xl text-base leading-relaxed sm:text-lg md:text-xl" style="font-family: var(--font-note);">
+          Independent <em class="terracotta">Artist</em>,
+          <em class="indigo-ink">Developer</em> &
+          <em class="sage">Author</em> — making music, technology,
+          films, and small digital experiments from Sonma, Begusarai.
+        </p>
+        <svg viewBox="0 0 100 40" class="mt-4 h-6 w-40 doodle" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
+          <path d="M2 20 Q 20 5, 40 20 T 80 20 T 98 15" />
+          <path d="M85 10 l6 -3 l-2 8" />
+        </svg>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="#work" class="hand-btn hand-btn-primary">→ browse the work</a>
+          <a href="#contact" class="hand-btn">✎ say hello</a>
+        </div>
+        <div class="mt-8 grid max-w-lg grid-cols-2 gap-3 text-sm" id="fieldnotes"></div>
+      </div>
+
+      <div class="relative md:col-span-2">
+        <div class="paper-card overflow-hidden" style="transform: rotate(2deg);">
+          <div class="washi-tape"></div>
+          <img src="sketch-code.jpg" alt="Sketch of tools of the trade" class="h-auto w-full" />
+          <div class="dashed-t px-4 py-3 text-center text-lg" style="font-family: var(--font-hand);">— tools of the trade —</div>
+        </div>
+        <div class="paper-card absolute -bottom-6 -left-6 hidden w-40 p-3 text-center md:block" style="transform: rotate(-6deg);">
+          <div class="text-xs uppercase tracking-widest fg-soft" style="font-family: var(--font-type);">tagline</div>
+          <div class="text-xl" style="font-family: var(--font-hand);">Artist · Developer · Author</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BIHAR SPREAD -->
+    <section class="mt-16 md:mt-24">
+      <div class="paper-card overflow-hidden" style="transform: rotate(-1deg);">
+        <div class="washi-tape" style="left:20%;"></div>
+        <div class="washi-tape" style="left:80%; transform: translateX(-50%) rotate(4deg);"></div>
+        <img src="sketch-hero.jpg" alt="Watercolor sketch of a village in Bihar" loading="lazy" class="h-auto w-full" />
+        <div class="flex flex-wrap items-center justify-between gap-2 dashed-t px-4 py-3 md:px-6 md:py-4">
+          <p style="font-family: var(--font-hand);" class="text-lg md:text-xl">"Where the Ganga flows eternal — the soil blooms gold in mustard."</p>
+          <span class="text-sm fg-soft" style="font-family: var(--font-type);">plate i · Sonma, Begusarai</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="mt-16 grid gap-8 md:mt-24 md:grid-cols-3 md:gap-10 scroll-mt-24">
+      <div class="md:col-span-2">
+        <div class="mb-6 flex flex-wrap items-center gap-3 md:mb-8 md:gap-4">
+          <span class="rubber-stamp shrink-0">§ 01</span>
+          <h2 class="text-3xl leading-tight sm:text-4xl md:text-5xl" style="font-family: var(--font-hand);"><span class="ink-underline">About the maker</span></h2>
+        </div>
+        <p class="text-base leading-relaxed sm:text-lg" style="font-family: var(--font-serif);">
+          <span class="float-left mr-3 text-6xl leading-none terracotta" style="font-family: var(--font-hand);">R</span>
+          avir Scott — born Ravish Kumar — is from Sonma, Begusarai, in Bihar, India. He is an Artist, Developer and Author, known for his work as an independent music artist, for developing tech, and for writing books. His work is entirely self-made — no record label, no production house, no co-writers.
+        </p>
+        <p class="mt-4 text-base leading-relaxed sm:text-lg" style="font-family: var(--font-serif);">
+          He builds websites, records music, writes books, and experiments with technology — continuously learning and creating on his own terms.
+        </p>
+      </div>
+      <aside class="paper-card relative p-5 md:p-6" style="transform: rotate(1.5deg);">
+        <div class="washi-tape"></div>
+        <h3 class="mb-3 text-2xl">Field notes</h3>
+        <ul class="space-y-2 text-base" style="font-family: var(--font-note);">
+          <li>◦ Nationality — Indian</li>
+          <li>◦ Profession — Artist, Developer, Author</li>
+          <li>◦ Years active — 2026 → present</li>
+          <li>◦ Label — Ravir's Wire</li>
+          <li>◦ Homebase — Sonma, Begusarai, Bihar</li>
+        </ul>
+        <div class="mt-4 flex items-center gap-2 terracotta">
+          <span style="font-family: var(--font-type);" class="text-sm">✦ self-produced</span>
+        </div>
+      </aside>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="mt-24">
+      <div class="mb-6 flex flex-wrap items-center gap-3 md:mb-8 md:gap-4">
+        <span class="rubber-stamp shrink-0">§ 02</span>
+        <h2 class="text-3xl leading-tight sm:text-4xl md:text-5xl" style="font-family: var(--font-hand);"><span class="ink-underline">Things I make with my hands</span></h2>
+      </div>
+      <div id="skills" class="flex flex-wrap gap-3"></div>
+    </section>
+
+    <!-- WORK -->
+    <section id="work" class="mt-16 scroll-mt-24 md:mt-24">
+      <div class="mb-6 flex flex-wrap items-center gap-3 md:mb-8 md:gap-4">
+        <span class="rubber-stamp shrink-0">§ 03</span>
+        <h2 class="text-3xl leading-tight sm:text-4xl md:text-5xl" style="font-family: var(--font-hand);"><span class="ink-underline">The work, catalogued</span></h2>
+      </div>
+      <div id="projects" class="grid gap-6 md:grid-cols-2 md:gap-8"></div>
+    </section>
+
+    <!-- STATS -->
+    <section class="mt-16 md:mt-24">
+      <div class="mb-6 flex flex-wrap items-center gap-3 md:mb-8 md:gap-4">
+        <span class="rubber-stamp shrink-0">§ 04</span>
+        <h2 class="text-3xl leading-tight sm:text-4xl md:text-5xl" style="font-family: var(--font-hand);"><span class="ink-underline">A quick tally</span></h2>
+      </div>
+      <div id="stats" class="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3"></div>
+    </section>
+
+    <!-- TIMELINE -->
+    <section class="mt-16 md:mt-24">
+      <div class="mb-6 flex flex-wrap items-center gap-3 md:mb-8 md:gap-4">
+        <span class="rubber-stamp shrink-0">§ 05</span>
+        <h2 class="text-3xl leading-tight sm:text-4xl md:text-5xl" style="font-family: var(--font-hand);"><span class="ink-underline">Timeline</span></h2>
+      </div>
+      <div class="relative pl-6 md:pl-8" style="border-left: 2px dashed color-mix(in oklch, var(--ink) 40%, transparent);">
+        <div class="relative">
+          <div class="absolute -left-[42px] top-1 flex h-8 w-8 items-center justify-center rounded-full mustard-bg text-sm" style="border:2px solid var(--ink); font-family: var(--font-hand);">✦</div>
+          <div class="text-5xl terracotta" style="font-family: var(--font-hand);">2026</div>
+          <ul class="mt-3 space-y-1 text-lg" style="font-family: var(--font-note);">
+            <li>— Released SANGAM</li>
+            <li>— Expanded into publishing</li>
+            <li>— Built personal tech ecosystem</li>
+            <li>— Continued software development and blogging</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOOLS -->
+    <section class="mt-16 md:mt-24">
+      <div class="mb-6 flex flex-wrap items-center gap-3 md:mb-8 md:gap-4">
+        <span class="rubber-stamp shrink-0">§ 06</span>
+        <h2 class="text-3xl leading-tight sm:text-4xl md:text-5xl" style="font-family: var(--font-hand);"><span class="ink-underline">Tools on the desk</span></h2>
+      </div>
+      <div class="paper-card mb-8 overflow-hidden" style="transform: rotate(-0.5deg);">
+        <div class="washi-tape" style="left:30%;"></div>
+        <img src="sketch-code.jpg" alt="Sketch of pencils, brushes and studio tools" loading="lazy" class="h-48 w-full object-cover sm:h-64" />
+      </div>
+      <div id="tools" class="flex flex-wrap gap-3 md:gap-4"></div>
+    </section>
+
+    <!-- LINKS -->
+    <section id="links" class="mt-16 scroll-mt-24 md:mt-24">
+      <div class="mb-6 flex flex-wrap items-center gap-3 md:mb-8 md:gap-4">
+        <span class="rubber-stamp shrink-0">§ 07</span>
+        <h2 class="text-3xl leading-tight sm:text-4xl md:text-5xl" style="font-family: var(--font-hand);"><span class="ink-underline">Find me across the wire</span></h2>
+      </div>
+      <div id="socials" class="grid grid-cols-2 gap-2 sm:grid-cols-3 sm:gap-3 md:grid-cols-4"></div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="mt-16 grid gap-8 scroll-mt-24 md:mt-24 md:grid-cols-2">
+      <div>
+        <div class="mb-6 flex flex-wrap items-center gap-3 md:mb-8 md:gap-4">
+          <span class="rubber-stamp shrink-0">§ 08</span>
+          <h2 class="text-3xl leading-tight sm:text-4xl md:text-5xl" style="font-family: var(--font-hand);"><span class="ink-underline">Write me a letter</span></h2>
+        </div>
+        <p class="max-w-md text-lg" style="font-family: var(--font-serif);">
+          For collaborations, press, or just a note — the door is always open. I read every message, even if I take a while to reply.
+        </p>
+      </div>
+      <div class="paper-card p-6" style="transform: rotate(-1deg);">
+        <div class="washi-tape"></div>
+        <div class="flex items-baseline justify-between dashed-b py-2">
+          <span class="text-xs uppercase tracking-widest fg-soft" style="font-family: var(--font-type);">Location</span>
+          <span class="text-lg" style="font-family: var(--font-hand);">Sonma, Begusarai, Bihar, India</span>
+        </div>
+        <a href="mailto:ravishkxz@gmail.com" class="flex items-baseline justify-between dashed-b py-2">
+          <span class="text-xs uppercase tracking-widest fg-soft" style="font-family: var(--font-type);">Email</span>
+          <span class="text-lg" style="font-family: var(--font-hand);">ravishkxz@gmail.com</span>
+        </a>
+        <a href="https://ravirscott.in" class="flex items-baseline justify-between dashed-b py-2">
+          <span class="text-xs uppercase tracking-widest fg-soft" style="font-family: var(--font-type);">Website</span>
+          <span class="text-lg" style="font-family: var(--font-hand);">ravirscott.in</span>
+        </a>
+        <div class="mt-4 text-right"><span class="rubber-stamp">received · 2026</span></div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="mt-16 dashed-t pt-6 text-center text-xs fg-soft md:mt-24 md:text-sm" style="font-family: var(--font-type);">
+      © RRSS · Ravir's Wire · sketched, typed & self-published from Bihar
+      <div class="mt-2" style="font-family: var(--font-hand);">P.S. — Made with S, with love, from Sonma, Bihar.</div>
+    </footer>
+  </main>
+
+  <script>
+    // Theme toggle
+    (function () {
+      const btn = document.getElementById("theme-toggle");
+      const stored = localStorage.getItem("rrss-theme");
+      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      let dark = stored ? stored === "dark" : prefersDark;
+      const apply = () => {
+        document.documentElement.classList.toggle("dark", dark);
+        btn.textContent = dark ? "☾ night" : "☀ day";
+      };
+      apply();
+      btn.addEventListener("click", () => { dark = !dark; localStorage.setItem("rrss-theme", dark ? "dark" : "light"); apply(); });
+    })();
+
+    // Field notes
+    const fieldnotes = [
+      ["real name", "Ravish Kumar"],
+      ["stage name", "Ravir Scott"],
+      ["born", "Sonma, Begusarai"],
+      ["label", "Ravir's Wire"],
+    ];
+    document.getElementById("fieldnotes").innerHTML = fieldnotes.map(([l, v]) => `
+      <div class="pl-3" style="border-left: 2px solid color-mix(in oklch, var(--ink) 40%, transparent);">
+        <div class="text-[10px] uppercase tracking-widest fg-soft" style="font-family: var(--font-type);">${l}</div>
+        <div class="text-lg" style="font-family: var(--font-hand);">${v}</div>
+      </div>`).join("");
+
+    // Skills
+    const skills = ["Full Stack Development","Web Design","AI & Automation","Music Production","Film Direction","Video Editing","Graphic Design","UI/UX","SEO","Blogger Development","Creative Writing","Branding"];
+    document.getElementById("skills").innerHTML = skills.map((s,i)=>`
+      <span class="sketch-border px-4 py-2 text-lg" style="background: var(--card); font-family: var(--font-hand); transform: rotate(${(i%3)-1}deg);">${s}</span>`).join("");
+
+    // Projects
+    const projects = [
+      { img: "sketch-music.jpg", emoji: "🎵", title: "Music", items: ["Lone Yet Loyal","Void Testament","SANGAM"], note: "released independently — on 10+ streaming platforms.", rot: -1.5, accent: "var(--terracotta)" },
+      { img: "sketch-code.jpg", emoji: "💻", title: "Development", items: ["Personal Website","Blogger Themes","AI Projects","Portfolio Systems","Web Applications"], note: "hand-coded websites, blogger themes & small AI experiments.", rot: 1.5, accent: "var(--indigo-ink)" },
+      { img: "sketch-writing.jpg", emoji: "📚", title: "Books", items: ["From Silence to Self-Made","Technology & Development publications"], note: "from silence to self-made — a life in pages.", rot: -1, accent: "var(--sage)" },
+      { img: "sketch-hero.jpg", emoji: "🎬", title: "Films", items: ["Lone Yet Loyal","SANGAM"], note: "short, independent, quiet. shot without a crew.", rot: 2, accent: "var(--mustard)" },
+    ];
+    document.getElementById("projects").innerHTML = projects.map(p=>`
+      <div class="paper-card overflow-hidden" style="transform: rotate(${p.rot}deg);">
+        <div class="washi-tape" style="background: ${p.accent}; opacity: .55;"></div>
+        <img src="${p.img}" alt="${p.title} sketch" loading="lazy" class="h-56 w-full object-cover" />
+        <div class="p-5">
+          <div class="flex items-baseline justify-between">
+            <h3 class="text-3xl" style="font-family: var(--font-hand);">${p.emoji} ${p.title}</h3>
+            <span class="text-xs uppercase tracking-widest fg-soft" style="font-family: var(--font-type);">catalogue</span>
+          </div>
+          <ul class="mt-3 space-y-1 text-lg" style="font-family: var(--font-note);">
+            ${p.items.map(it=>`<li class="flex gap-2"><span style="color:${p.accent};">✱</span> ${it}</li>`).join("")}
+          </ul>
+          <p class="mt-4 pt-3 text-sm italic fg-soft" style="font-family: var(--font-serif); border-top: 1px dashed color-mix(in oklch, var(--ink) 30%, transparent);">${p.note}</p>
+        </div>
+      </div>`).join("");
+
+    // Stats
+    const stats = [
+      ["🎵","Music Platforms","10+"],
+      ["💻","Websites Developed","Multiple"],
+      ["📚","Published","Author"],
+      ["🎬","Filmmaker","Independent"],
+      ["🌍","Distribution","Global"],
+      ["🇮🇳","Based in","Bihar, India"],
+    ];
+    document.getElementById("stats").innerHTML = stats.map(([icon,label,value],i)=>`
+      <div class="paper-card p-4 sm:p-5" style="transform: rotate(${(i%2===0?-1:1)*1.2}deg);">
+        <div class="text-2xl sm:text-3xl">${icon}</div>
+        <div class="mt-2 text-xl sm:text-2xl" style="font-family: var(--font-hand);">${value}</div>
+        <div class="text-[10px] uppercase tracking-widest fg-soft sm:text-sm" style="font-family: var(--font-type);">${label}</div>
+      </div>`).join("");
+
+    // Tools
+    const tools = ["Git","GitHub","Cloudflare","Blogger","VS Code","Replit"];
+    document.getElementById("tools").innerHTML = tools.map((t,i)=>`
+      <div class="paper-card px-4 py-2 text-lg md:px-5 md:py-3 md:text-xl" style="font-family: var(--font-hand); transform: rotate(${(i%2?1:-1)*1.5}deg);">▢ ${t}</div>`).join("");
+
+    // Socials
+    const socials = [
+      ["Official Website","https://ravirscott.in"],
+      ["Portfolio","https://ravir.fun"],
+      ["GitHub","https://github.com/ravirscott"],
+      ["LinkedIn","https://linkedin.com/in/ravir-scott"],
+      ["YouTube","https://youtube.com/@ravirscott"],
+      ["Spotify","https://open.spotify.com/artist/1u7rvL1GtodxI2NqgGHV4n"],
+      ["Apple Music","https://music.apple.com/in/artist/ravir-scott/1826115974"],
+      ["Amazon Music","https://music.amazon.in/artists/B0FHHMYV6D/ravir-scott"],
+      ["JioSaavn","https://www.jiosaavn.com/artist/ravir-scott/ck6zgbq8FYY_"],
+      ["Deezer","https://www.deezer.com/en/artist/335437501"],
+      ["TIDAL","https://tidal.com/artist/63530890"],
+      ["IMDb","https://www.imdb.com/name/nm17511609/"],
+      ["Google Scholar","https://scholar.google.com/citations?hl=en&user=8-2cCnAAAAAJ"],
+      ["ResearchGate","https://www.researchgate.net/profile/Ravir-Scott-2"],
+      ["ORCID","https://orcid.org/0009-0004-1132-8228"],
+      ["About.me","https://about.me/ravirscott"],
+      ["Medium","https://medium.com/@ravirscott"],
+      ["Hashnode","https://ravirscott.hashnode.dev"],
+      ["Dev.to","https://dev.to/ravirscott"],
+      ["Linktree","https://linktr.ee/ravirscott"],
+      ["Reddit","https://reddit.com/user/Ravirscott"],
+    ];
+    document.getElementById("socials").innerHTML = socials.map(([name,url],i)=>`
+      <a href="${url}" target="_blank" rel="noreferrer noopener" class="paper-card block px-4 py-3" style="transform: rotate(${((i*37)%5)-2}deg); text-decoration:none; color: inherit;">
+        <div class="text-xs uppercase tracking-widest fg-soft" style="font-family: var(--font-type);">link · ${String(i+1).padStart(2,"0")}</div>
+        <div class="text-xl" style="font-family: var(--font-hand);">${name}</div>
+      </a>`).join("");
+  </script>
+</body>
+</html>
