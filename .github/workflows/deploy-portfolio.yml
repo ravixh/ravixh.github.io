@@ -1,0 +1,44 @@
+name: Deploy portfolio site
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'portfolio-site.zip'
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Replace site files with portfolio contents
+        run: |
+          set -euo pipefail
+          rm -rf /tmp/site && mkdir -p /tmp/site
+          unzip -q -o portfolio-site.zip -d /tmp/site
+          INDEX_HTML="$(find /tmp/site -maxdepth 4 -name 'index.html' | head -n 1)"
+          if [ -z "$INDEX_HTML" ]; then
+            echo 'index.html not found inside portfolio-site.zip' >&2
+            find /tmp/site -maxdepth 3 | head -n 50 >&2
+            exit 1
+          fi
+          SITE_DIR="$(dirname "$INDEX_HTML")"
+          echo "Portfolio site directory: $SITE_DIR"
+          ls -la "$SITE_DIR"
+          # Remove all currently tracked files (the old Sketchbook site).
+          # Git history keeps the old versions, so nothing is permanently lost.
+          git ls-files -z | xargs -0 -r git rm -q
+          # Copy the portfolio files into the repository root, structure preserved.
+          cp -r "$SITE_DIR"/. "$GITHUB_WORKSPACE"/
+          rm -rf "$GITHUB_WORKSPACE"/__MACOSX
+          # Remove the zip and this one-off workflow so the repo ends up clean.
+          rm -f "$GITHUB_WORKSPACE"/portfolio-site.zip
+          git add -A
+          git -c user.name 'ravixh' -c user.email 'ravixh@users.noreply.github.com' \
+            commit -m 'Replace Sketchbook site with portfolio site' || echo 'nothing to commit'
+          git push origin HEAD:main
