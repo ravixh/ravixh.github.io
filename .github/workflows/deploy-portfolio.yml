@@ -39,6 +39,6 @@ jobs:
           # Remove the zip and this one-off workflow so the repo ends up clean.
           rm -f "$GITHUB_WORKSPACE"/portfolio-site.zip
           git add -A
-          git -c user.name 'ravixh' -c user.email 'ravixh@users.noreply.github.com' \
-            commit -m 'Replace Sketchbook site with portfolio site' || echo 'nothing to commit'
+          git -c user.name=ravixh -c user.email=ravixh@users.noreply.github.com \
+            commit -m 'Replace Sketchbook site with portfolio site'
           git push origin HEAD:main
